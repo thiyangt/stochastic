@@ -20,7 +20,9 @@ You can install the development version of stochastic from
 pak::pak("thiyangt/stochastic")
 ```
 
-## Example
+## Examples
+
+### n-step transition probability matrix
 
 ``` r
 library(stochastic)
@@ -43,4 +45,32 @@ nstepmat(x, 2, 13)
 #>           [,1]      [,2]
 #> [1,] 0.3333333 0.6666667
 #> [2,] 0.3333333 0.6666667
+```
+
+### Compute stationary probabilities
+
+``` r
+mat <- matrix(c(0.5, 0.5, 0.7, 0.3), byrow=TRUE, ncol=2)
+stationary_prob(onestep=mat)
+#> [1] 0.5833333 0.4166667
+```
+
+### Simulate a Markov Chain process
+
+``` r
+init <- c(0.1, 0.9)
+mat <- matrix(c(0.5, 0.5, 0.7, 0.3), byrow=TRUE, ncol=2)
+simmarkov(init, mat, 100, c("Rainy", "Sunny"))
+#>   [1] "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny"
+#>  [10] "Sunny" "Sunny" "Rainy" "Rainy" "Rainy" "Rainy" "Rainy" "Rainy" "Rainy"
+#>  [19] "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy"
+#>  [28] "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy"
+#>  [37] "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy"
+#>  [46] "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny"
+#>  [55] "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny"
+#>  [64] "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Rainy"
+#>  [73] "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy"
+#>  [82] "Sunny" "Rainy" "Rainy" "Rainy" "Rainy" "Sunny" "Sunny" "Sunny" "Rainy"
+#>  [91] "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Sunny"
+#> [100] "Rainy" "Sunny"
 ```

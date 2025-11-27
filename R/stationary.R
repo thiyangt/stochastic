@@ -3,6 +3,7 @@
 #'
 #'@param onestep one step transition probability matrix
 #'@return returns stationary probability distribution
+#'@export
 stationary_prob <- function(onestep) {
 
   # --- Check matrix validity ---

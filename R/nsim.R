@@ -5,6 +5,7 @@
 #' @param lengthmc length of the Markov chain process except state at t=0
 #' @param statespace state space or state labels as of the order of init
 #' @return vector of statespace in simulated markov chain process
+#' @export
 simmarkov <- function(init, onestep, lengthmc, statespace) {
 
   # --- Basic dimension checks ---
@@ -41,7 +42,7 @@ simmarkov <- function(init, onestep, lengthmc, statespace) {
 
   # transitions based on the previous step values
   for (i in 2:(lengthmc + 1)) {
-    sim.states[i] <- sample(states, 1, prob = mat[simlist[i - 1], ])
+    sim.states[i] <- sample(states, 1, prob = mat[sim.states[i - 1], ])
   }
 
   return(statespace[sim.states])
