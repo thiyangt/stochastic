@@ -49,7 +49,7 @@ nstepmat <- function(x, k, n, byrow=TRUE){
       matn <- mt %^% n
       print(paste("The one-step transition probability matrix is:"))
       prmatrix(mt)
-      print(paste("The", n, "-step transition probability matrix is:"))
+      print(paste("The", n,"-step transition probability matrix is:"))
       prmatrix(matn)
 
 

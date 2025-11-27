@@ -7,7 +7,8 @@
 
 <!-- badges: end -->
 
-The goal of stochastic is to …
+The goal of stochastic is to provide calculations related to the Markov
+chain processes.
 
 ## Installation
 
