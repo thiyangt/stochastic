@@ -7,6 +7,7 @@
 #'@param n Higher order
 #'@param byrow To fill the matrix row-wise or column-wise
 #'@importFrom matrixcalc is.square.matrix
+#'@importFrom expm %^%
 #'@return a list containing one-step transition probability matrix and n-step transition
 #'@export
 nstepmat <- function(x, k, n, byrow=TRUE){

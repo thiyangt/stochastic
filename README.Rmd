@@ -1,0 +1,44 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# stochastic
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of stochastic is to ...
+
+## Installation
+
+You can install the development version of stochastic from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("thiyangt/stochastic")
+```
+
+## Example
+
+
+
+
+```{r example}
+library(stochastic)
+x <- c(0.2,0.8,0.4,0.6)
+nstepmat(x, 2, 3)
+nstepmat(x, 2, 13)
+```
+
+
