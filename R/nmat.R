@@ -2,8 +2,8 @@
 #'
 #' Given one-step transition probability matrix compute higher-order transition
 #' probability of a homogeneous Markov chain process
-#'@param onestep One step transition probability matrix
-#'@param states Number of states
+#'@param x One step transition probability matrix values
+#'@param k Number of states
 #'@param n Higher order
 #'@param byrow To fill the matrix row-wise or column-wise
 #'@importFrom matrixcalc is.square.matrix

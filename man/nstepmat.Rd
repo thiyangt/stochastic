@@ -7,13 +7,13 @@
 nstepmat(x, k, n, byrow = TRUE)
 }
 \arguments{
+\item{x}{One step transition probability matrix values}
+
+\item{k}{Number of states}
+
 \item{n}{Higher order}
 
 \item{byrow}{To fill the matrix row-wise or column-wise}
-
-\item{onestep}{One step transition probability matrix}
-
-\item{states}{Number of states}
 }
 \value{
 a list containing one-step transition probability matrix and n-step transition

@@ -29,7 +29,7 @@ You can install the development version of stochastic from [GitHub](https://gith
 pak::pak("thiyangt/stochastic")
 ```
 
-## Examples
+## Use cases
 
 ### n-step transition probability matrix
 

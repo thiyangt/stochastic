@@ -20,7 +20,7 @@ You can install the development version of stochastic from
 pak::pak("thiyangt/stochastic")
 ```
 
-## Examples
+## Use cases
 
 ### n-step transition probability matrix
 
@@ -61,16 +61,16 @@ stationary_prob(onestep=mat)
 init <- c(0.1, 0.9)
 mat <- matrix(c(0.5, 0.5, 0.7, 0.3), byrow=TRUE, ncol=2)
 simmarkov(init, mat, 100, c("Rainy", "Sunny"))
-#>   [1] "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny"
-#>  [10] "Sunny" "Sunny" "Rainy" "Rainy" "Rainy" "Rainy" "Rainy" "Rainy" "Rainy"
-#>  [19] "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy"
-#>  [28] "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy"
-#>  [37] "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy"
-#>  [46] "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny"
-#>  [55] "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny"
-#>  [64] "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Rainy"
-#>  [73] "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy"
-#>  [82] "Sunny" "Rainy" "Rainy" "Rainy" "Rainy" "Sunny" "Sunny" "Sunny" "Rainy"
-#>  [91] "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Sunny"
-#> [100] "Rainy" "Sunny"
+#>   [1] "Sunny" "Rainy" "Rainy" "Sunny" "Sunny" "Sunny" "Rainy" "Rainy" "Rainy"
+#>  [10] "Rainy" "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy"
+#>  [19] "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy"
+#>  [28] "Sunny" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny"
+#>  [37] "Rainy" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Sunny" "Sunny"
+#>  [46] "Sunny" "Sunny" "Rainy" "Sunny" "Sunny" "Sunny" "Sunny" "Sunny" "Sunny"
+#>  [55] "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy"
+#>  [64] "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy"
+#>  [73] "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy"
+#>  [82] "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy"
+#>  [91] "Sunny" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Sunny" "Sunny"
+#> [100] "Rainy" "Rainy"
 ```
