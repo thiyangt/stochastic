@@ -61,16 +61,32 @@ stationary_prob(onestep=mat)
 init <- c(0.1, 0.9)
 mat <- matrix(c(0.5, 0.5, 0.7, 0.3), byrow=TRUE, ncol=2)
 simmarkov(init, mat, 100, c("Rainy", "Sunny"))
-#>   [1] "Sunny" "Rainy" "Rainy" "Sunny" "Sunny" "Sunny" "Rainy" "Rainy" "Rainy"
-#>  [10] "Rainy" "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy"
-#>  [19] "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy"
-#>  [28] "Sunny" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny"
-#>  [37] "Rainy" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Sunny" "Sunny"
-#>  [46] "Sunny" "Sunny" "Rainy" "Sunny" "Sunny" "Sunny" "Sunny" "Sunny" "Sunny"
-#>  [55] "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy"
-#>  [64] "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy"
-#>  [73] "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy"
-#>  [82] "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy"
-#>  [91] "Sunny" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Sunny" "Sunny"
+#>   [1] "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy"
+#>  [10] "Rainy" "Rainy" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny"
+#>  [19] "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Sunny" "Sunny"
+#>  [28] "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Rainy" "Rainy"
+#>  [37] "Sunny" "Rainy" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny"
+#>  [46] "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny"
+#>  [55] "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy"
+#>  [64] "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy"
+#>  [73] "Rainy" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy"
+#>  [82] "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny"
+#>  [91] "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Sunny" "Sunny"
 #> [100] "Rainy" "Rainy"
 ```
+
+### Transition diagram
+
+``` r
+plot_markov_chain(mat)
+#> 
+#> Attaching package: 'igraph'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     decompose, spectrum
+#> The following object is masked from 'package:base':
+#> 
+#>     union
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
