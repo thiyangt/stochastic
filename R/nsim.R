@@ -9,8 +9,8 @@
 simmarkov <- function(init, onestep, lengthmc, statespace) {
 
   # --- Basic dimension checks ---
-  if (!is.numeric(init) || any(init <= 0))
-    stop("Initial probabilities must be numeric and strictly positive.")
+  if (!is.numeric(init) || any(init < 0))
+    stop("Initial probabilities must be numeric and cannot be negative.")
 
   if (abs(sum(init) - 1) > 1e-10)
     stop("Initial probabilities must sum to 1.")
@@ -23,8 +23,8 @@ simmarkov <- function(init, onestep, lengthmc, statespace) {
 
   # --- Check each row sums to 1 and contains no zeros ---
   for (i in 1:nrow(onestep)) {
-    if (any(onestep[i, ] <= 0))
-      stop(paste("Row", i, "contains zero or negative probabilities. All must be > 0."))
+    if (any(onestep[i, ] < 0))
+      stop(paste("Row", i, "contains negative values."))
 
     if (abs(sum(onestep[i, ]) - 1) > 1e-10)
       stop(paste("Row", i, "of transition matrix does not sum to 1."))
