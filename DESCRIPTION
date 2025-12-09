@@ -1,11 +1,10 @@
 Package: stochastic
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Compute Markov chain process calculations
+Version: 0.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Thiyanga S.", "Talagala", , "ttalagala@sjp.ac.lk", role = c("aut", "cre"), comment=c(ORCID = "0000-0002-0656-9789"))
+Description: The package allows users to compute key metrics of Markov chains.
+License: GPL (>= 3)
 Encoding: UTF-8
 Depends:
     R (>= 4.5.1)

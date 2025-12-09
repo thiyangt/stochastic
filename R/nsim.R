@@ -21,7 +21,7 @@ simmarkov <- function(init, onestep, lengthmc, statespace) {
   if (nrow(onestep) != length(init) || ncol(onestep) != length(init))
     stop("Transition matrix dimensions must match number of states.")
 
-  # --- Check each row sums to 1 and contains no zeros ---
+  # --- Check each row sums to 1 ---
   for (i in 1:nrow(onestep)) {
     if (any(onestep[i, ] < 0))
       stop(paste("Row", i, "contains negative values."))
@@ -30,19 +30,19 @@ simmarkov <- function(init, onestep, lengthmc, statespace) {
       stop(paste("Row", i, "of transition matrix does not sum to 1."))
   }
 
-  # --- States ---
+  # --- State labels ---
   if (missing(statespace)) statespace <- 1:length(init)
 
   # --- Simulation ---
   sim.states <- numeric(lengthmc + 1)
   states <- 1:length(init)
 
-  # initial state simulation
+  # initial state
   sim.states[1] <- sample(states, 1, prob = init)
 
-  # transitions based on the previous step values
+  # transitions
   for (i in 2:(lengthmc + 1)) {
-    sim.states[i] <- sample(states, 1, prob = mat[sim.states[i - 1], ])
+    sim.states[i] <- sample(states, 1, prob = onestep[sim.states[i - 1], ])
   }
 
   return(statespace[sim.states])
