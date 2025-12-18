@@ -28,7 +28,7 @@ nstepmat <- function(x, k, n, byrow = TRUE) {
     stop("Error: Elements of transition probability matrix are not numeric.")
   } else if (any(mt < 0) | any(mt > 1)) {
     stop("Error: Matrix contains negative values or values greater than 1.")
-  } else if (any(abs(rowSums(mt) - 1) > 1e-8)) {
+  } else if (any(abs(rowSums(mt) - 1) > 1)) {
     stop("Error: Row sums of the transition probability matrix do not equal 1.")
   }
 
