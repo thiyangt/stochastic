@@ -2,20 +2,44 @@
 % Please edit documentation in R/plot_markov_chain.R
 \name{plot_markov_chain}
 \alias{plot_markov_chain}
-\title{Plot the transition diagram}
+\title{Plot a Markov Chain Transition Diagram}
 \usage{
 plot_markov_chain(P, state_names = NULL, threshold = 0.01)
 }
 \arguments{
-\item{P}{transition probability matrix}
+\item{P}{A numeric square matrix representing the transition probabilities
+of the Markov chain. Each row should sum to 1.}
 
-\item{state_names}{Optional vector of state labels}
+\item{state_names}{An optional character vector providing names for the states.
+If NULL (default), states are labeled as "S1", "S2", ..., "Sn".}
 
-\item{threshold}{Minimum probability to display an edge}
+\item{threshold}{A numeric value specifying the minimum transition probability
+required to display an edge in the diagram. Default is 0.01.}
 }
 \value{
-Transition diagram
+A plot of the Markov chain as a directed graph. Vertices represent
+states, and edges represent transitions with probabilities above the threshold.
 }
 \description{
-Plot the transition diagram
+This function visualizes a Markov chain as a directed graph representing the
+transition probabilities between states. Only transitions with probabilities
+above a specified threshold are displayed.
+}
+\details{
+This function relies on the following \code{igraph} functions:
+\code{graph}, \code{V}, \code{E}, \code{plot}.
+Users must ensure that the \code{igraph} package is installed and loaded.
+
+Edge widths are scaled by the transition probability, and edge labels
+display probabilities rounded to two decimal places.
+}
+\examples{
+library(igraph)
+P <- matrix(c(0.8, 0.2,
+              0.1, 0.9), nrow = 2, byrow = TRUE)
+plot_markov_chain(P)
+
+state_names <- c("Sunny", "Rainy")
+plot_markov_chain(P, state_names, threshold = 0.05)
+
 }

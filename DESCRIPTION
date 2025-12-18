@@ -7,8 +7,8 @@ Description: The package allows users to compute key metrics of Markov chains.
 License: GPL (>= 3)
 Encoding: UTF-8
 Depends:
-    R (>= 4.5.1)
-Suggests: 
+    R (>= 4.0.0)
+Imports: 
     matrixcalc,
     expm,
     igraph

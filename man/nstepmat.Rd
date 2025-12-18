@@ -7,18 +7,18 @@
 nstepmat(x, k, n, byrow = TRUE)
 }
 \arguments{
-\item{x}{One step transition probability matrix values}
+\item{x}{Numeric vector of one-step transition probability matrix values.}
 
-\item{k}{Number of states}
+\item{k}{Number of states.}
 
-\item{n}{Higher order}
+\item{n}{Higher order (number of steps).}
 
-\item{byrow}{To fill the matrix row-wise or column-wise}
+\item{byrow}{Logical; fill matrix by row or by column.}
 }
 \value{
-a list containing one-step transition probability matrix and n-step transition
+A list containing the one-step transition matrix and the n-step transition matrix.
 }
 \description{
-Given one-step transition probability matrix compute higher-order transition
-probability of a homogeneous Markov chain process
+Given a one-step transition probability matrix, compute higher-order transition
+probabilities of a homogeneous Markov chain process.
 }

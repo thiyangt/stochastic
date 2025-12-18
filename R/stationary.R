@@ -23,7 +23,7 @@ stationary_prob <- function(onestep) {
   # --- Solve πP = π  <=>  π(P - I) = 0 with sum(π)=1 ---
 
   # Create matrix A = (P' - I)
-  A <- t(mat) - diag(n)
+  A <- t(onestep) - diag(n)
 
   # Replace one row with ones to enforce sum(pi)=1
   A[n, ] <- rep(1, n)
