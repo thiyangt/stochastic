@@ -32,8 +32,18 @@ nstepmat <- function(x, k, n, byrow = TRUE) {
     stop("Error: Row sums of the transition probability matrix do not equal 1.")
   }
 
-  matn <- expm::`%^%`(mt, n)
+ # matn <- expm::`%^%`(mt, n)
+
+  m <- as.numeric(mt)
+
+
+
+  matn <- mt %^% n
+  print(paste("The one-step transition probability matrix is:"))
+  prmatrix(mt)
+  print(paste("The", n,"-step transition probability matrix is:"))
+  prmatrix(matn)
 
   # Return results as a list
-  return(list(one_step = mt, n_step = matn))
+  #return(list(one_step = mt, n_step = matn))
 }

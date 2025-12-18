@@ -1,6 +1,6 @@
 Package: stochastic
 Title: Compute Markov chain process calculations
-Version: 0.0.1
+Version: 1.0.0
 Authors@R: 
     person("Thiyanga S.", "Talagala", , "ttalagala@sjp.ac.lk", role = c("aut", "cre"), comment=c(ORCID = "0000-0002-0656-9789"))
 Description: The package allows users to compute key metrics of Markov chains.
