@@ -35,7 +35,7 @@ pak::pak("thiyangt/stochastic")
 
 ```{r example}
 library(stochastic)
-x <- c(0.2,0.8,0.4,0.6)
+x <- c(0.7,0.3,0.4,0.6)
 nstepmat(x, 2, 3)
 nstepmat(x, 2, 13)
 ```
