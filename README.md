@@ -61,18 +61,18 @@ stationary_prob(onestep=mat)
 init <- c(0.1, 0.9)
 mat <- matrix(c(0.5, 0.5, 0.7, 0.3), byrow=TRUE, ncol=2)
 simmarkov(init, mat, 100, c("Rainy", "Sunny"))
-#>   [1] "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Sunny"
-#>  [10] "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy"
-#>  [19] "Sunny" "Sunny" "Sunny" "Rainy" "Rainy" "Sunny" "Sunny" "Sunny" "Sunny"
-#>  [28] "Sunny" "Rainy" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy"
-#>  [37] "Sunny" "Rainy" "Sunny" "Sunny" "Sunny" "Sunny" "Sunny" "Sunny" "Rainy"
-#>  [46] "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy"
-#>  [55] "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy"
-#>  [64] "Rainy" "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny"
-#>  [73] "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy"
-#>  [82] "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy"
-#>  [91] "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Sunny"
-#> [100] "Sunny" "Sunny"
+#>   [1] "Sunny" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Rainy"
+#>  [10] "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Rainy" "Sunny"
+#>  [19] "Rainy" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Sunny"
+#>  [28] "Sunny" "Rainy" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny"
+#>  [37] "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy"
+#>  [46] "Rainy" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny" "Sunny" "Rainy"
+#>  [55] "Sunny" "Sunny" "Rainy" "Rainy" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy"
+#>  [64] "Rainy" "Sunny" "Rainy" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Sunny"
+#>  [73] "Rainy" "Sunny" "Sunny" "Rainy" "Rainy" "Sunny" "Rainy" "Rainy" "Rainy"
+#>  [82] "Rainy" "Rainy" "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Rainy"
+#>  [91] "Sunny" "Rainy" "Sunny" "Sunny" "Rainy" "Sunny" "Rainy" "Sunny" "Rainy"
+#> [100] "Rainy" "Sunny"
 ```
 
 ### Transition diagram
